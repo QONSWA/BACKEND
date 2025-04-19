@@ -15,7 +15,8 @@ SECRET_KEY = 'django-insecure-kngepvxt6e582&9*-xvhcln0uo!k*^%tm_@5uw42inc-h@6$lh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*", "ahmedqonswaback.up.railway.app"]
+ALLOWED_HOSTS = ['.railway.app', 'localhost', '127.0.0.1']
+
 
 # Application definition
 
@@ -121,7 +122,7 @@ USE_TZ = True
 # MEDIA_ROOT is for the user-uploaded content
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -135,8 +136,9 @@ CORS_ALLOW_ALL_ORIGINS = True
 # أو لو عايز تحدد فقط نطاق Vercel
 # CORS_ALLOWED_ORIGINS = ['https://your-frontend.vercel.app']
 CORS_ALLOWED_ORIGINS = [
-  "https://rep-lyart.vercel.app"
+    "https://rep-lyart.vercel.app",
 ]
+
 
 
 FILE_UPLOAD_PERMISSIONS=0o640
